@@ -173,7 +173,7 @@ jQuery(document).ready(function($) {
             $("#time-box").empty().removeClass('d-none').addClass('d-flex');
 
             body_tag.on('change', time_input_ranche, function () {
-                let value_selected = $(this).val();
+                let value_selected = $('select[name="time_ranche"]').val();
 
                 let end_time = 18 - value_selected;
                 let string_endtime = end_time.toString() + ":00";
