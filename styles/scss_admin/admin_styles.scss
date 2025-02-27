@@ -1,0 +1,65 @@
+@import "../scss_main/functions";
+@import "../scss_main/variables";
+@import "../scss_main/framework";
+
+.medi-booking-tool-admin {
+  @media only screen and (min-width: $media-hd) {
+    padding: 0 15rem;
+  }
+
+  @media only screen and (max-width: $media-hd) {
+    padding: 0 5rem;
+  }
+
+  @media only screen and (max-width: $media-lg) {
+    padding: 0 2.5rem;
+  }
+
+  .button {
+    &-primary {
+      background-color: $primary-color;
+
+      &:hover {
+        background-color: $secondary-color;
+      }
+    }
+  }
+
+  .column-settings {
+    width: 10%;
+  }
+
+  .modal {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0,0,0,.2);
+    backdrop-filter: blur(10px);
+
+    &-content-box {
+      padding: 1rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background-color: white;
+    }
+
+    &-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: font-calc(40, 25);
+      cursor: pointer;
+    }
+
+    table {
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,0 +1,327 @@
+@charset "UTF-8";
+/**--------  Main colors  --------**/
+/**-------- Media Query´s --------**/
+/** ---- width ---- **/
+.w-100 {
+  width: 100%;
+}
+.w-50 {
+  width: 50%;
+}
+
+/** ---- displays ---- **/
+.d-flex {
+  display: flex;
+}
+.d-none {
+  display: none;
+}
+
+/** ---- flex sub classes ---- */
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+/** ---- Gaps ---- **/
+.gap-1 {
+  gap: 1rem;
+}
+.gap-2 {
+  gap: 2rem;
+}
+
+/** ---- Margins ---- */
+.mt-1 {
+  margin-top: 1rem !important;
+}
+.mt-2 {
+  margin-top: 2rem !important;
+}
+.mb-1 {
+  margin-bottom: 1rem !important;
+}
+.mb-2 {
+  margin-bottom: 2rem !important;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-bolder {
+  font-weight: bold;
+}
+
+/** ---- input controls ---- **/
+input[type=radio].form-radio {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid #1a7f8e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input[type=radio].form-radio:focus {
+  outline: none;
+  outline-style: initial;
+}
+input[type=radio].form-radio:checked {
+  background-color: rgba(118, 159, 173, 0.5);
+}
+input[type=radio].form-radio:checked:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/></svg>') no-repeat center;
+  background-size: 100%;
+}
+
+select.form-select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: center;
+  border: 2px solid #1a7f8e;
+  padding: 0.5rem 1rem;
+  font-size: calc(24px + (18 - 24) * (100vw - 300px) / 1620);
+}
+select.form-select:focus {
+  outline: none;
+  outline-style: initial;
+}
+select.form-select:hover {
+  cursor: pointer;
+}
+
+.form-select-container {
+  position: relative;
+}
+.form-select-container:after {
+  opacity: 0;
+  content: "+";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.2s all;
+  color: #1a7f8e;
+}
+.form-select-container:hover:after {
+  opacity: 1;
+}
+
+.form-text {
+  box-sizing: border-box;
+  font-size: calc(24px + (18 - 24) * (100vw - 300px) / 1620);
+  line-height: calc(30px + (24 - 30) * (100vw - 300px) / 1620);
+  padding: 0.5rem 1rem;
+  border: 2px solid #1a7f8e;
+}
+.form-text:focus {
+  outline: none;
+  outline-style: initial;
+}
+
+.medi-booking-tool h1, .medi-booking-tool .h1 {
+  font-size: calc(40px + (50 - 40) * (100vw - 300px) / 1620);
+}
+.medi-booking-tool h2, .medi-booking-tool .h2 {
+  font-size: calc(30px + (45 - 30) * (100vw - 300px) / 1620);
+}
+.medi-booking-tool h3, .medi-booking-tool .h3 {
+  font-size: calc(20px + (35 - 20) * (100vw - 300px) / 1620);
+}
+.medi-booking-tool h4, .medi-booking-tool .h4 {
+  font-size: calc(18px + (30 - 18) * (100vw - 300px) / 1620);
+}
+.medi-booking-tool h5, .medi-booking-tool .h5 {
+  font-size: calc(16px + (25 - 16) * (100vw - 300px) / 1620);
+}
+.medi-booking-tool h6, .medi-booking-tool .h6 {
+  font-size: calc(16px + (22 - 16) * (100vw - 300px) / 1620);
+}
+.medi-booking-tool .inactive {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
+}
+.medi-booking-tool .btn {
+  padding: 0.5rem 1rem;
+  transition: 0.2s all;
+}
+.medi-booking-tool .btn-primary {
+  color: #1a7f8e;
+  border: 2px solid #769fad;
+}
+.medi-booking-tool .btn-primary:hover, .medi-booking-tool .btn-primary.active {
+  background-color: #1a7f8e;
+  color: white;
+  cursor: pointer;
+}
+.medi-booking-tool .btn-secondary {
+  background-color: #1a7f8e;
+  border: 2px solid #769fad;
+  color: white;
+}
+.medi-booking-tool .btn-secondary:hover {
+  background-color: white;
+  color: #1a7f8e;
+  cursor: pointer;
+}
+.medi-booking-tool #step-two, .medi-booking-tool #step-three {
+  display: none;
+}
+.medi-booking-tool #time-box.show {
+  padding: 2rem 0;
+  border-top: 1px solid #769fad;
+  border-bottom: 1px solid #769fad;
+}
+.medi-booking-tool #time-box .time-selector:hover {
+  cursor: pointer;
+  background-color: #769fad;
+  color: white;
+}
+.medi-booking-tool #time-box .time-selector.active {
+  background: #1a7f8e;
+  color: white;
+}
+.medi-booking-tool-content {
+  padding: 2rem 0;
+  min-height: 20vh;
+}
+.medi-booking-tool-content #week,
+.medi-booking-tool-content #list {
+  display: none;
+}
+.medi-booking-tool-content #list .day {
+  padding: 1rem;
+  border-bottom: 1px solid #769fad;
+}
+.medi-booking-tool-content #list .day.fully-booked {
+  background-color: #1a7f8e;
+  color: white;
+  display: flex;
+  gap: 2rem;
+}
+.medi-booking-tool-content #list .day:hover {
+  cursor: pointer;
+  background-color: #769fad;
+  color: white;
+}
+.medi-booking-tool-content #list .day.active {
+  background: #1a7f8e;
+  color: white;
+}
+.medi-booking-tool-content #week-title {
+  padding: 1rem 0;
+}
+.medi-booking-tool-content #week .day {
+  flex: 1;
+  text-align: center;
+}
+.medi-booking-tool-content #week .day:hover {
+  cursor: pointer;
+  background-color: #769fad;
+  color: white;
+}
+.medi-booking-tool-content #week .day.active {
+  background: #1a7f8e;
+  color: white;
+}
+.medi-booking-tool-content #week .day.fully-booked {
+  background-color: #1a7f8e;
+  color: white;
+}
+.medi-booking-tool-content #week .weekdays > div {
+  flex: 1;
+}
+.medi-booking-tool-content #week-prev, .medi-booking-tool-content #week-next {
+  display: flex;
+  align-items: center;
+}
+.medi-booking-tool-content #week-prev:hover, .medi-booking-tool-content #week-next:hover {
+  cursor: pointer;
+}
+.medi-booking-tool-content .zabuto-calendar {
+  width: 100%;
+}
+.medi-booking-tool-content .zabuto-calendar__event.fully-booked {
+  background-color: #1a7f8e;
+  color: white;
+}
+.medi-booking-tool-content .zabuto-calendar__day {
+  text-align: center;
+  transition: 0.2s all;
+}
+.medi-booking-tool-content .zabuto-calendar__day--today {
+  text-align: center;
+}
+.medi-booking-tool-content .zabuto-calendar__day--today:hover {
+  cursor: pointer;
+}
+.medi-booking-tool-content .zabuto-calendar__day:hover {
+  cursor: pointer;
+  background-color: #769fad;
+  color: white;
+}
+.medi-booking-tool-content .zabuto-calendar__day.active {
+  text-align: center;
+  background: #1a7f8e;
+  color: white;
+}
+.medi-booking-tool-content .zabuto-calendar__navigation__item--header {
+  vertical-align: middle;
+  text-align: center;
+  padding: 1rem 0;
+}
+.medi-booking-tool-content .zabuto-calendar__navigation__item--prev {
+  vertical-align: middle;
+}
+.medi-booking-tool-content .zabuto-calendar__navigation__item--prev .prev:after {
+  content: "<";
+  font-size: 20px;
+}
+.medi-booking-tool-content .zabuto-calendar__navigation__item--prev:hover {
+  cursor: pointer;
+}
+.medi-booking-tool-content .zabuto-calendar__navigation__item--next {
+  vertical-align: middle;
+  text-align: right;
+}
+.medi-booking-tool-content .zabuto-calendar__navigation__item--next .next:after {
+  content: ">";
+  font-size: 20px;
+}
+.medi-booking-tool-content .zabuto-calendar__navigation__item--next:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=frontend_view.css.map */

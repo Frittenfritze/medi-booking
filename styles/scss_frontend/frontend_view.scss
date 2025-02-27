@@ -1,0 +1,243 @@
+@import "../scss_main/functions";
+@import "../scss_main/variables";
+@import "../scss_main/framework";
+
+.medi-booking-tool {
+  h1, .h1 {
+    font-size: font-calc(50, 40);
+  }
+
+  h2, .h2 {
+    font-size: font-calc(45, 30);
+  }
+
+  h3, .h3 {
+    font-size: font-calc(35, 20);
+  }
+
+  h4, .h4 {
+    font-size: font-calc(30, 18);
+  }
+
+  h5, .h5 {
+    font-size: font-calc(25, 16);
+  }
+
+  h6, .h6 {
+    font-size: font-calc(22, 16);
+  }
+
+  .inactive {
+    opacity: .5;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .btn {
+    padding: .5rem 1rem;
+    transition: .2s all;
+
+    &-primary {
+      color: $primary-color;
+      border: 2px solid $secondary-color;
+
+      &:hover,
+      &.active {
+        background-color: $primary-color;
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    &-secondary {
+      background-color: $primary-color;
+      border: 2px solid $secondary-color;
+      color: white;
+
+      &:hover {
+        background-color: white;
+        color: $primary-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #step {
+    &-two,
+    &-three {
+      display: none;
+    }
+  }
+
+  #time {
+    &-box {
+      &.show {
+        padding: 2rem 0;
+        border-top: 1px solid $secondary-color;
+        border-bottom: 1px solid $secondary-color;
+      }
+
+      .time-selector {
+        &:hover {
+          cursor: pointer;
+          background-color: $secondary-color;
+          color: white;
+        }
+
+        &.active {
+          background: $primary-color;
+          color: white;
+        }
+      }
+    }
+  }
+
+  &-content {
+    padding: 2rem 0;
+    min-height: 20vh;
+
+    #week,
+    #list {
+      display: none;
+    }
+
+    #list {
+      .day {
+        padding: 1rem;
+        border-bottom: 1px solid $secondary-color;
+
+        &.fully-booked {
+          background-color: $primary-color;
+          color: white;
+          display: flex;
+          gap: 2rem;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: $secondary-color;
+          color: white;
+        }
+
+        &.active {
+          background: $primary-color;
+          color: white;
+        }
+      }
+    }
+
+    #week {
+      &-title {
+        padding: 1rem 0;
+      }
+
+      .day {
+        flex: 1;
+        text-align: center;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $secondary-color;
+          color: white;
+        }
+
+        &.active {
+          background: $primary-color;
+          color: white;
+        }
+
+        &.fully-booked {
+          background-color: $primary-color;
+          color: white
+        }
+      }
+
+      .weekdays {
+        & > div {
+          flex: 1;
+        }
+      }
+
+      &-prev,
+      &-next {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .zabuto-calendar {
+      width: 100%;
+
+      &__event {
+        &.fully-booked {
+          background-color: $primary-color;
+          color: white
+        }
+      }
+
+      &__day {
+        text-align: center;
+        transition: .2s all;
+
+        &--today {
+          text-align: center;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: $secondary-color;
+          color: white;
+        }
+
+        &.active {
+          text-align: center;
+          background: $primary-color;
+          color: white;
+        }
+      }
+
+      &__navigation__item {
+        &--header {
+          vertical-align: middle;
+          text-align: center;
+          padding: 1rem 0;
+        }
+
+        &--prev {
+          vertical-align: middle;
+
+          .prev:after {
+            content: '<';
+            font-size: 20px;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        &--next {
+          vertical-align: middle;
+          text-align: right;
+
+          .next:after {
+            content: '>';
+            font-size: 20px;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
